@@ -16,3 +16,4 @@ Pour mieux comprendre la structure de l'arbre, j'ai utilisé plot_tree ou export
 
 Cette démarche méthodique a permis de construire un arbre de décision performant et adapté à mon problème.
 
+![Description](https://github.com/user-attachments/assets/40a07ede-1e54-42f1-9955-366037b36df4)
