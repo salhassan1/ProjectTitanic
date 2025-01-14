@@ -1,12 +1,22 @@
 # ouverture de fichier titanic.csv
-
-import pandas as pd
+import pymongo
+import pandas as pd # pandas est une librairie python qui permet de manipuler des données
 from matplotlib import pyplot as plt
 
-# pandas est une librairie python qui permet de manipuler des données
+# Connexion à MongoDB
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+db = client["YutopiaDB"] #nom de la base de données
+collection = db["titanic"] #nom de la collection
 
 # Charger les données
 data_titanic = pd.read_csv('titanic.csv')
+
+# Convertir le DataFrame en dictionnaires (JSON-like format)
+data = df.to_dict(orient='records')
+
+# Insérer les données dans MongoDB
+collection.insert_many(data)
+print("Données CSV chargées avec succès.")
 
 print(data_titanic.head())
 
